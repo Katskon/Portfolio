@@ -1,0 +1,90 @@
+body{
+	margin: 0 auto;
+	height: 100%;
+}
+
+#wrapper{
+	min-height: 100%; /*整個區塊高度為100%*/
+	margin-bottom: -30px; /*等一下footer 的高度會是100px */
+}
+#banner{
+	height: 70px;
+	width: 100%;
+}
+
+#logo{
+	float: left;
+}
+
+#logo img{
+	width: 100%;
+}
+
+#fb{
+	float: right;
+	margin-right: 1em;
+}
+
+
+#fb img{
+	width: 50%;
+}
+
+
+#ig{
+	float: right;
+	margin-right: 1em;
+}
+
+#ig img{
+	width: 50%;
+}
+
+#menu{
+	height: 50px;
+	width: 100%;
+	background-color: #98E0EB;
+	color: #ffffff; /*區塊內的文字為白色*/
+}
+#content{
+	min-height: 300px;
+	width: 100%;
+}
+#footer{
+	height: 30px;
+	width: 100%;
+	background-color: #000000;
+	color: #ffffff;
+	text-align: center;/*對齊方式:置中*/
+	clear: both; /*清除float效果*/
+}
+
+#footer span{
+	font-size: 20px;
+
+}
+
+
+#menu ul{
+	font-size: 20px;
+	margin-left: 27%;
+	color:#98E0EB;
+	padding-top: 12px;
+
+}
+
+#menu li{
+
+	list-style: none;  /*項目符號不要出來*/
+	float: left;
+	padding-left: 2em;
+	padding-right: 2em; /*em :相對單位,每個子元素透過倍數*父元素的px值
+				          10px = 0.625em*/
+}
+
+
+#menu a{
+	color: #ffffff;
+	text-decoration: none; /*底線為none*/
+	font-weight: bold; /*字的重量:字粗體*/
+}

@@ -1,0 +1,23 @@
+#newsArea{
+	margin-top: 60px;
+	width: 100%;
+}
+
+.newsItem{
+	width: 65%;
+	height: 200px;
+	margin-top: 100px;
+
+}
+
+.newsItem img{
+	width: 100%;
+
+}
+
+.newsItem p{
+	font-size: 23px;
+	font-weight: bold;
+	text-align: center;
+
+}
