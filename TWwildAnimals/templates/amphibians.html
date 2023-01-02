@@ -1,0 +1,37 @@
+{% extends 'species_base.html' %}
+
+{% block pageTitle %}
+兩棲類
+{% endblock %}
+
+{% block species_css %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/amphibians.css')}}">
+{% endblock %}
+
+{% block speciesArea %}
+
+<div id="button_area">
+	
+	<form action="/amphibians" method="get">
+		{% for row in item %}
+		<button class="btn btn-success" type="submit" name="type" value="{{row[0]}}">{{row[0]}}</button>
+		{% endfor %}
+	</form>
+
+</div>
+
+<div id="species_area">
+
+
+	{% for row in result %}
+	<a href="{{row[5]}}"  target="_blank"><div class="one_species">
+		<img src="{{row[4]}}">
+		<p>{{row[2]}}</p>		
+	</div></a>
+	{% endfor %}
+	{{pagination.links}}
+
+
+</div>
+
+ {% endblock %}

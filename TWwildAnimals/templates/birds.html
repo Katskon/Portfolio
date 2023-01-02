@@ -1,0 +1,62 @@
+{% extends 'species_base.html' %}
+
+{% block pageTitle %}
+鳥類
+{% endblock %}
+
+
+{% block species_css %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/birds.css')}}">
+{% endblock %}
+
+
+{% block speciesArea %}
+
+
+
+<div id="button_area">
+	
+	<form action="/birds" method="get">
+
+		<button class="btn btn-warning" type="submit" name="type" value="走禽">走禽</button>
+		<button class="btn btn-warning" type="submit" name="type" value="涉禽">涉禽</button>
+		<button class="btn btn-warning" type="submit" name="type" value="水禽">水禽</button>
+		<button class="btn btn-warning" type="submit" name="type" value="猛禽">猛禽</button>
+		<button class="btn btn-warning" type="submit" name="type" value="雜食性">雜食性</button>
+		<button class="btn btn-warning" type="submit" name="type" value="素食性">素食性</button>
+		<button class="btn btn-warning" type="submit" name="type" value="蟲食性">蟲食性</button>
+
+	</form>
+
+</div>
+
+<div id="species_area">
+
+
+	{% for row in result %}
+	<a href="{{row[5]}}"  target="_blank"><div class="one_species">
+		<img src="{{row[4]}}">
+		<p>{{row[2]}}</p>		
+	</div></a>
+	{% endfor %}
+
+	{{pagination.links}}
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ {% endblock %}

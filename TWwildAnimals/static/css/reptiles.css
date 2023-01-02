@@ -1,0 +1,58 @@
+
+#content{
+	height: 500px;
+}
+
+#button_area{
+	width: 50%;
+	height: 100px;
+	margin-left: 40%;
+	margin-top: -50px;
+	float: left;
+	position: absolute;
+}
+
+#button_area button{
+	margin-left: 5%;
+}
+
+#species_area{
+	height: 550px;
+	width: 50%;
+	background-color: #CFECF5;
+	float: left;
+	margin-left: 3%;
+}
+
+#species_area ul {
+	position: absolute;
+	bottom: 70px;
+	right: 420px;
+
+	
+}
+
+.one_species{
+	float: left;
+	border: thick double #008FF5;
+	height: 200px;
+	width: 29%;
+	margin: 2%;
+}
+
+.one_species img{
+	height: 80%;
+	width: 90%;
+	padding-left: 10%;
+}
+
+.one_species p{
+	margin-top: 8px;
+	font-size: 22px;
+	color: #497AF5;
+	text-align: center;
+}
+
+.one_species p:hover{
+	color: #2D4B96;
+}

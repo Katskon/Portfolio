@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block pageTitle %}
+憲約名單加加
+{% endblock %}
+
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/addcreature.css')}}">
+{% endblock %}
+
+
+<!-- 業務聯絡 -->
+
+{% block mainContent %}
+
+<div style="margin-top: 20px;"></div>
+
+<div id="message">
+	<p class="subject">憲約加加</p>
+	<form class="contact_form" action="/addProcess" method="post">
+
+		<div class="form-group">
+			<label>憲約分類</label>
+			<input type="text" name="now_class" class="form-control" required />	
+		</div>
+
+		<div class="form-group">
+			<label>俗名</label>
+			<input type="text" name="name" class="form-control" required />	
+		</div>
+
+		<div class="form-group">
+			<label>科</label>
+			<input type="text" name="family" class="form-control" required />	
+		</div>
+
+		<div class="form-group">
+			<label>圖片連結</label>
+			<input type="text" name="pic_url" class="form-control" required />	
+		</div>
+
+		<div class="form-group">
+			<label>連結</label>
+			<input type="text" name="url" class="form-control" required />	
+		</div>
+
+		<div class="form-group">
+			<label>學名</label>
+			<input type="text" name="scientific" class="form-control" required />	
+		</div>
+
+		<div class="form-group">
+			<label>簡介</label>
+			<textarea name="introduction" rows="10" class="form-control" required></textarea>
+		</div>
+
+		<div class="form-group">
+			<button type="submit" class="btn_submit">送出憲約</button>
+		</div>
+
+	</form>
+</div>
+
+
+
+{% endblock %}

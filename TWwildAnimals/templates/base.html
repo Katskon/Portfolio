@@ -1,0 +1,140 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <!-- Viewport 通常針對手機用戶 使畫面等於手機長寬 shrink-to-fit=no, user-scalable=no 可以讓使用者無法縮放手機畫面 -->
+
+    <!-- Title -->
+    <title>
+        {% block pageTitle %}
+        {% endblock %}
+    </title>
+
+    
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static',filename='img/frogicon.ico')}}">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/animate.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/font-awesome.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/owl.carousel.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/classy-nav.css')}}">
+    <!---->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
+
+
+    <!-- 新增的CSS JS -->
+    {% block css %}
+    {% endblock %}
+
+    {% block js %}
+    {% endblock %}
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preload-content">
+            <div id="original-load"></div>
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- Logo Area -->
+        <div class="logo-area text-center">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12">
+                        <a href="/index" class="original-logo"><img src="{{ url_for('static',filename='img/logo.jpg') }}"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nav Area -->
+        <div class="original-nav-area" id="stickyNav">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Classy Menu -->
+                    <nav class="classy-navbar justify-content-between">
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu" id="originalNav">
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                           
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="/index">首頁</a></li>
+                                    <li><a href="/species">物種分類</a>
+                                        <ul class="dropdown">
+                                            <li><a href="/amphibians">兩棲類</a></li>
+                                            <li><a href="/birds">鳥類</a></li>
+                                            <li><a href="/reptiles">爬蟲類</a></li>
+                                            <li><a href="/mammals">哺乳類</a></li>
+                                            <li><a href="#" style="cursor: not-allowed;">節肢類(施工中)</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/about">關於憲約</a></li>
+                                    <li><a href="/random">立刻憲約</a></li>
+                                    <li><a href="/addcreature">憲約加加</a></li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <div id="content">
+
+            {% block mainContent %}
+            {% endblock %}
+            
+    </div>
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area text-center clearfix mt-50">
+       
+            <div class="copyright" style="clear: both; padding-top:30px;">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script> Katskon All rights reserved | 
+                made with <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </div>
+            <div style="float: left; margin-left: 20%;"><a style="color: #DAF1E9;" href="/addcreature">憲約加加</a></div>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+
+    <!-- jQuery (Necessary for All JavaScript Plugins) -->
+    <script src="{{ url_for('static',filename='js/jquery/jquery-2.2.4.min.js') }}"></script>
+    <!-- Popper js -->
+    <script src="{{ url_for('static',filename='js/popper.min.js') }}"></script>
+    <!-- Bootstrap js -->
+    <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+    <!-- Plugins js -->
+    <script src="{{ url_for('static',filename='js/plugins.js') }}"></script>
+    <!-- Active js -->
+    <script src="{{ url_for('static',filename='js/active.js') }}"></script>
+
+</body>
+
+</html>

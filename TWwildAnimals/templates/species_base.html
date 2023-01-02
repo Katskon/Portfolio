@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block pageTitle %}
+物種分類
+{% endblock %}
+
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/species.css')}}">
+
+	{% block species_css %}
+
+	{% endblock %}
+
+{% endblock %}
+
+{% block mainContent %}
+<div style="margin-top: 50px;"></div>
+
+
+ 	<div id="classbar">
+ 		<ul class="border border-success rounded">
+ 			<li class="border border-success"><a href="/amphibians">兩棲類</a></li>
+ 			<li class="border border-success"><a href="/birds">鳥類</a></li>
+ 			<li class="border border-success"><a href="/reptiles">爬蟲類</a></li>
+ 			<li class="border border-success"><a href="/mammals">哺乳類</a></li>
+ 			<li class="border border-success"style="color: black; cursor: not-allowed;">節肢類(施工中)</li>
+ 		</ul>
+ 	</div>
+
+ 	{% block speciesArea %}
+
+ 	{% endblock %}
+
+
+
+{% endblock %}

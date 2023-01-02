@@ -1,0 +1,45 @@
+{% extends 'species_base.html' %}
+
+{% block pageTitle %}
+物種分類
+{% endblock %}
+
+{% block js %}
+<script src="{{ url_for('static',filename='js/species.js') }}"></script>
+{% endblock %}
+
+
+
+
+{% block speciesArea %}
+
+
+<div id="speciesContainer">
+
+
+
+	<div class="speciesBar">
+
+		<h1>隨機憲約</h1>
+
+		<ul class="speciesItem">
+			{% for row in item %}
+			<li><a href="{{row[5]}}" target="_blank"><img src="{{row[4]}}"></a></li>
+			{% endfor %}
+		</ul>
+
+		<div class="btn left">&lt;</div>   
+		<div class="btn right">&gt;</div>
+	
+	</div>
+
+
+
+</div>
+
+
+
+
+
+
+ {% endblock %}

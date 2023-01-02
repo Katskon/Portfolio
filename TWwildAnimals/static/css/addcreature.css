@@ -1,0 +1,58 @@
+#message{
+	margin-left: 35%;
+}
+
+
+.contact_form{
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 0.5em 0.6em;
+	font-size: 100%;
+	line-height: 1.15;
+	width: 500px;
+	margin-bottom: 100px;
+}
+
+
+
+.form-control{
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 0.5em 0.6em;
+	font-size: 100%;
+	line-height: 1.15;
+	width: 450px;
+	margin-top: 5px;
+
+}
+
+.form-group{
+	margin: 2%;
+}
+
+.form-group label{
+	margin-top: 1%;
+}
+
+.form-group textarea {
+	resize:none;
+}
+
+.subject{
+	font-size: 30px;
+	font-weight: bold;
+	margin-left: 15%;
+	color: #8FB200;
+}
+
+.btn_submit{
+	background-color: #8DE0C3;
+	color: #ffffff;
+	padding: 0.5em 1em;
+	border: transparent; /* 邊框線整個透明  */
+}
+
+.btn_submit:hover {
+	background-color: #25E076;
+	cursor: pointer;
+}

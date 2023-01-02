@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+
+{% block pageTitle %}
+憲約野外教室
+{% endblock %}
+
+
+{% block mainContent %}
+
+    <!-- ##### Blog Wrapper Start ##### -->
+    <div class="blog-wrapper clearfix mt-50">
+        <div class="container">
+            <div class="row align-items-end">
+                <!-- Single Blog Area -->
+                <div class="col-12 col-lg-4">
+                    <div class="single-blog-area clearfix ">
+                        <!-- Blog Content -->
+                        <div class="single-blog-content">
+                            <div class="line"></div>
+                            <p href="#" class="post-tag">Ecology</p>
+                            <h4><a href="#" class="post-headline">Welcome to TWAnimals Now</a></h4>
+                            <p>台灣位處亞熱帶地區，屬於季風型氣候的海洋島嶼，於冰河時期前遷移的物種因融冰後造成的生態隔閡，使得我們擁有許多特有種及特有亞種。相信大家常常在野外看到他們卻只能說著 "啊!有青蛙!有蛇!有一隻小鳥!有...勞贖!" 卻從來不知道他們真證的名字。 想要認識這些可愛的好朋友們嗎? 現在就讓我們一起<strong> 憲約野外教室 !</strong> </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Blog Area -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-catagory-area clearfix mb-70">
+                        <img src="{{ url_for('static',filename='img/blog-img/1.jpg')}}" alt="">
+                        <!-- Catagory Title -->
+                        <div class="catagory-title">
+                            <a href="/species">物種花名冊</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Blog Area -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-catagory-area clearfix mb-70">
+                        <img src="{{ url_for('static',filename='img/blog-img/2.jpg')}}" alt="">
+                        <!-- Catagory Title -->
+                        <div class="catagory-title">
+                            <a href="/random">憲約不囉嗦</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>     
+    </div>
+
+{% endblock %}

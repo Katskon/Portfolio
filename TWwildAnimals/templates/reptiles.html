@@ -1,0 +1,56 @@
+{% extends 'species_base.html' %}
+
+{% block pageTitle %}
+爬蟲類
+{% endblock %}
+
+
+{% block species_css %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/reptiles.css')}}">
+{% endblock %}
+
+
+{% block speciesArea %}
+
+
+
+<div id="button_area">
+	
+	<form action="/reptiles" method="get">
+		<button class="btn btn-info" type="submit" name="type" value="龜鱉目">龜鱉目</button>
+		<button class="btn btn-info" type="submit" name="type" value="蛇亞目">蛇亞目</button>
+		<button class="btn btn-info" type="submit" name="type" value="鬣蜥蜥蜴亞目">鬣蜥、蜥蜴亞目</button>
+	</form>
+
+</div>
+
+
+<div id="species_area">
+
+
+	{% for row in result %}
+	<a href="{{row[5]}}"  target="_blank"><div class="one_species">
+		<img src="{{row[4]}}">
+		<p>{{row[2]}}</p>		
+	</div></a>
+	{% endfor %}
+	{{pagination.links}}
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ {% endblock %}

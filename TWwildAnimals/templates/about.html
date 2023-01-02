@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+
+{% block pageTitle %}
+關於憲約
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/about.css')}}">
+{% endblock %}
+
+
+{% block mainContent %}
+
+    <!-- ##### Blog Wrapper Start ##### -->
+    <div class="blog-wrapper clearfix mt-50">
+        <div class="container">
+            <div class="row align-items-end">
+                <!-- Single Blog Area -->
+                <div class="col-12 col-lg-4" style="margin-left: 150px;margin-bottom: 50px;">
+                    <div class="single-blog-area clearfix ">
+                        <!-- Blog Content -->
+                        <div class="single-blog-content">
+                            <div class="line"></div>
+                            <h4><a href="https://www.linkedin.com/in/hsin-hsien-tsai-40211325b/?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAD_pI4IBazT4bAr0QSme7EWjU8yyiQ3w4jo" class="post-headline" target="blank_">關於憲約</a></h4>
+                            
+                            <p> <strong> 憲約野外教室 !</strong>  是一位來自於中興生科系畢業的全端學生所做出的網站，結合自己系上所學專業以及對於生態上的興趣，希望能夠讓大家更加認識台灣這寶島上面所居住的大大小小鄰居。資料來源來自於維基百科，台灣生命大百科，以及台灣鳥類圖鑑，並且加上許多自己學到的內容，希望大家都能愛上這些生物。</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Blog Area -->
+                <div class="col-12 col-md-6 col-lg-4" style="margin-left: 100px;">
+                    <div class="single-catagory-area clearfix mb-70">
+                        <img src="{{ url_for('static',filename='img/菜哥拉拉.jpg')}}" alt="">
+                        <!-- Catagory Title -->
+                        <div class="catagory-title" style="background:#ffffffa3;;">
+                            <a href="https://github.com/Katskon" style="color:black;"target=blank_>偷看憲憲</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>     
+    </div>
+
+{% endblock %}
