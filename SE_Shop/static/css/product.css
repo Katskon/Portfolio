@@ -1,0 +1,90 @@
+
+#button_area{
+	width: 15%;
+	min-height: 300px;
+	float: left;
+	position: sticky;
+	top: 30px;
+
+}
+
+
+#button_area button{
+	width: 90%;
+	height: 50px;
+	margin-bottom: 3%;
+	background-color: #6EA4EB;
+	font-size: 20px;
+	cursor: pointer;
+	color: black;
+}
+
+#button_area button:hover{
+	background-color:#11128C;
+	color: white;
+}
+
+
+
+
+.productArea{
+	width: 100%;
+	margin-left: 15%;
+}
+
+
+
+
+.productArea > .info{
+	width: 55%;
+	height: 200px;
+	border: 1px solid #ccc;
+	margin-bottom: 1%;
+	overflow:visible;
+	background-color: #DCE9ED;
+}
+
+.photoarea{
+	float: left;
+	width: 35%;
+	height: 100%;
+}
+
+.photoarea img{
+	width: 100%;
+	height: 100%;
+}
+
+.pricearea{
+	float: right;
+	width: 50%;
+	height: 100%;
+	margin-right: 5%;
+}
+
+.pricearea p{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.pricearea a{
+	float: right;
+	margin-right: 30px;
+	font-size: 25px;
+	font-weight: bold;
+	margin-bottom: 0px;
+}
+
+.info span{
+	font-weight: bold;
+	color: red;
+	font-size: 24px;
+	position: relative;
+	bottom: 0;
+
+
+}
+
+/*表示超連結都是吃以下CSS*/
+
+

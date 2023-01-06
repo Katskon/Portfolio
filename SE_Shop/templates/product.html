@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block pageTitle %}
+產品資訊
+{% endblock %}
+
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="/static/css/product.css" />
+{% endblock %}
+
+
+
+
+
+
+{% block mainContent %}
+
+	<div id="button_area">
+	
+		<form action="/product" method="get">
+
+			<button class="btn" type="submit" name="type" value="ミュージック">ミュージック</button>
+			<button class="btn" type="submit" name="type" value="ゲーム">ゲーム</button>
+			<button class="btn" type="submit" name="type" value="ブック">ブック</button>
+			<button class="btn" type="submit" name="type" value="グッズ">グッズ</button>
+
+		</form>
+
+	</div>
+
+
+	<div class="productArea">
+		{% for row in allgoods %}
+
+			<div class="info">
+				<div class="photoarea">
+					<a href="{{row.url}}" target="_blank">
+						<img src="{{row.photo}}">
+					</a>
+				</div>
+				<div class="pricearea">
+					<p>{{row.name}}</p>
+
+					<span>{{row.price}}円(税込)</span>
+					<a href="/addtocart/add/{{row.id}}/">Buy</a>
+				</div>
+
+			</div>
+
+		{% endfor %}
+
+	</div>
+
+		<div style="float:left;height: 60px;text-align: center;margin-top: 3%;margin-left: 38%;">
+
+			{% if allgoods.has_previous %}
+
+				<a href="?page={{allgoods.previous_page_number}}&type={{goodstype}}">上一頁</a>
+
+			{% endif %}
+
+			{% if allgoods.has_next %}
+
+				<a href="?page={{allgoods.next_page_number}}&type={{goodstype}}">下一頁</a>
+
+			{% endif %}
+
+	</div>
+
+	<div style="clear: both;"></div>
+
+
+{% endblock %}

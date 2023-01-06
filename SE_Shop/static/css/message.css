@@ -1,0 +1,100 @@
+#message{
+	margin-bottom: 10%;
+	width: 60%;
+	height: 300px;
+	margin-left: 5%;
+}
+
+.contact_form{
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 0.5em 0.6em;
+	font-size: 14px;
+	line-height: 1.15;
+	width: 100%;
+	margin-bottom: 100px;
+}
+
+.contact_form label{
+	font-size: 18px;
+	line-height: 3.5;
+
+}
+
+.form-control{
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 0.5em 0.6em;
+	font-size: 100%;
+	line-height: 1;
+	width: 100%;
+	margin-top: 10px;
+
+}
+
+.form-group{
+	margin: 2%;
+}
+
+
+.subject{
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	color: #005B8F;
+}
+
+.btn_submit{
+	background-color: #005B8F;
+	color: #ffffff;
+	padding: 0.5em 1em;
+	border: transparent; /* 邊框線整個透明  */
+	width: 20%;
+	height: 40px;
+	cursor: pointer;
+	margin-left: 80%;
+	margin-top: 1%;
+	font-size: 20px;
+	line-height: 20px;
+}
+
+.btn_submit:hover{
+	background-color:#112E8F
+}
+
+#contentarea{
+	float: left;
+	clear: both;
+	width: 70%;
+	min-height: 400px;
+	background-color: #DCF1F7;
+	border: solid #4A6E8F;
+	margin-bottom: 5%;
+}
+
+.single_comment{
+	width: 70%;
+	margin-left: 15%;
+	border: double;
+	margin-bottom: 5%;
+}
+
+.c_title{
+	margin-left: 5%;
+	margin-right: 5%;
+	font-size: 24px;
+	font-weight: bold;
+	color: #17338F;
+}
+
+.c_name{
+	margin-left: 5%;
+	font-size: 18px;
+	color: #556D8F;
+}
+
+.c_content{
+	margin-left: 5%;
+	margin-right: 5%;
+	font-size: 15px;
+}

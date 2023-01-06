@@ -1,0 +1,22 @@
+#adarea{
+	width: 40%;
+
+}
+
+
+
+
+#textarea{
+	width: 25%;
+	min-height: 540px;
+	float: right;
+	position: absolute;
+	top:340px;
+	right: 440px;
+}
+
+#textarea img{
+	width: 50%;
+	height: 30%;
+	margin-left: 25%;
+}

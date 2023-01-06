@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block pageTitle %}
+會員登入
+{% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" href="/static/css/login.css" />
+{% endblock %}
+
+
+
+{% block mainContent %}
+
+
+<div style="margin-top: 50px;"></div>
+
+<div id="message">
+
+	<p class="subject">會員登入</p>
+
+	
+	<p style="color: #ff0000;">{{msg}}</p>
+
+	<form action="" method="post">
+		{% csrf_token %}
+			<div class="form-group">
+				<label>帳號:</label>
+				<input type="email" name="email" class="form-control" required />
+			</div>
+			<div class="form-group">
+				<label>密碼:</label>
+				<input type="password" name="password" class="form-control" required />
+			</div>
+			<button type="submit" class="btn_submit">登入</button>		
+			<a href="/register" class="register">註冊</a>
+	</form>
+
+</div>
+		
+{% endblock %}

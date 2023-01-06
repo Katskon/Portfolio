@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block pageTitle %}
+留言板
+{% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" href="/static/css/message.css" />
+{% endblock %}
+
+
+{% block mainContent %}
+
+
+
+
+<div id="message">
+
+	<p class="subject">留言板</p>
+
+	<form class="contact_form" action="" method="post">
+		<!-- Djongo裡面如果用post形式表單則需要加入csrf_token(跨網域偽造請求 抓取一個很像session--暫存--的值) -->
+		{% csrf_token %}  
+		<div class="from-group">
+			<input type="text" name="title" class="form-control" placeholder="標題"  required />
+		</div>
+
+		<div class="from-group">
+			<input type="text" name="cuName" class="form-control" placeholder="暱稱" required />
+		</div>
+
+		<div class="from-group">
+			<textarea style="resize: none;" name="content" rows="10" class="form-control" placeholder="請輸入內容" required /></textarea>
+		</div>
+
+		<div class="from-group">
+			<button type="submit" class="btn_submit">送出</button>			
+		</div>
+
+	</form>
+</div>
+
+<div id="contentarea">
+	<p class="subject">最新留言</p>
+
+	{% for row in comment %}
+		<div class="single_comment">
+			<p class="c_title">{{row.subject}}</p>
+			<p class="c_name">{{row.name}}</p>
+			<hr style="width: 90%;">
+			<p class="c_content">{{row.content}}</p>
+		</div>
+	{% endfor %}
+	
+
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block pageTitle %}
+職業介紹
+{% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" href="/static/css/jobs.css" />
+{% endblock %}
+
+
+{% block mainContent %}
+
+<div id="icon_area">
+
+	<div class="joblist">
+		<h4 style="color: #0D01E6; margin-top: 10px;">タンク</h4>
+		<form method="get" action="/jobs" class="iconform">
+		{% for row in tank %}
+		<button class="icon" type="submit" name="jobname" value="{{row.jobname}}"><img src="{{row.icon}}"></button>
+		{% endfor %}
+		</form>		
+	</div>
+
+	<div class="joblist">
+		<h4 style="color: #00DD5B;margin-top: 10px;">ヒーラー</h4>
+		<form method="get" action="/jobs" class="iconform">
+		{% for row in healer %}
+		<button class="icon" type="submit" name="jobname" value="{{row.jobname}}"><img src="{{row.icon}}"></button>
+		{% endfor %}
+		</form>			
+	</div>
+
+	<div class="joblist">
+
+		<h4 style="color: #E60800;margin-top: 10px;">近接物理DPS</h4>
+		<form method="get" action="/jobs" class="iconform">
+		{% for row in melee %}
+		<button class="icon" type="submit" name="jobname" value="{{row.jobname}}"><img src="{{row.icon}}"></button>
+		{% endfor %}
+		</form>	
+		
+	</div>
+
+	<div class="joblist">
+
+		<h4 style="color: #E60800;margin-top: 10px;">遠隔物理DPS</h4>
+		<form method="get" action="/jobs" class="iconform">
+		{% for row in ranged %}
+		<button class="icon" type="submit" name="jobname" value="{{row.jobname}}"><img src="{{row.icon}}"></button>
+		{% endfor %}
+		</form>	
+		
+	</div>
+
+	<div class="joblist">
+
+		<h4 style="color: #E60800;margin-top: 10px;">遠隔魔法DPS</h4>
+		<form method="get" action="/jobs" class="iconform">
+		{% for row in caster %}
+		<button class="icon" type="submit" name="jobname" value="{{row.jobname}}"><img src="{{row.icon}}"></button>
+		{% endfor %}
+		</form>	
+		
+	</div>
+	
+</div>
+
+<div id="showcase">
+	{% for row in showcase %}
+	<img src="{{row.photo}}">
+	{% endfor %}
+	{% for row in showcase %}
+	<a href="{{row.link}}" target="blank_" style="color: rgb(0, 110, 147);"><h4 style="margin-top: 1px">{{row.jobname}}</h4></a>
+	{% endfor %}
+	<div class="description">
+		{% for row in showcase %}
+		<p>{{row.description}}</p>
+		{% endfor %}
+	</div>
+	
+</div>
+
+{% endblock %}

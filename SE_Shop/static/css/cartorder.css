@@ -1,0 +1,14 @@
+#maindiv *{
+	font-size: 20px;
+}
+
+.buttons{
+	margin-top: 10%;
+}
+
+.buttons input{
+	background-color: #01618F;
+	color: white;
+	cursor: pointer;
+
+}
